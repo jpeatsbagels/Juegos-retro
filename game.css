@@ -1,0 +1,46 @@
+/* Estilos compartidos de páginas de juego */
+:root{
+  --bg:#f3ede0; --bg2:#e9dfc9; --card:#faf6ec; --border:#d9cba8;
+  --ink:#2e2620; --soft:#5c5245; --muted:#8a7d68;
+  --accent:#6b4f2e; --gold:#b07d3c;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,Arial,sans-serif;background:linear-gradient(180deg,#f3ede0,#e9dfc9);color:var(--ink);min-height:100vh}
+.game-top{background:#2e2620;color:#f3ede0;position:sticky;top:0;z-index:5}
+.game-top-inner{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.back{color:#f3ede0;text-decoration:none;font-weight:700;font-size:14px;background:#453823;padding:8px 14px;border-radius:8px}
+.back:hover{background:#57492f}
+.game-top h1{font-size:18px;margin:0;letter-spacing:1px}
+.game-top .tag{margin-left:auto;font-size:12px;color:#cbbfa5;letter-spacing:1px}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 20px 40px;display:grid;grid-template-columns:1.4fr .9fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:0 10px 30px rgba(80,60,30,.15);padding:18px}
+.stage{display:grid;place-items:center;background:#2e2620;border-radius:12px;padding:16px;min-height:300px}
+canvas{background:#1d1812;border-radius:8px;max-width:100%;touch-action:none}
+.hud{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.hud .box{flex:1;min-width:110px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center}
+.hud .box small{display:block;font-size:11px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+.hud .box strong{font-size:24px}
+.controls-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+button.btn{background:var(--ink);color:#f7f1e3;border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}
+button.btn:hover{background:#000}
+button.btn.secondary{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+button.btn.secondary:hover{background:var(--ink);color:#f7f1e3}
+.hint{color:var(--soft);font-size:14px;line-height:1.6}
+.hint kbd{background:#2e2620;color:#f3ede0;border-radius:6px;padding:2px 8px;font-size:12px;font-family:inherit}
+.touch{display:none;gap:8px;margin-top:12px;flex-wrap:wrap}
+.touch button{flex:1;min-width:60px;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--bg2);font-size:18px;font-weight:800;cursor:pointer}
+.board-ttt{display:grid;grid-template-columns:repeat(3,110px);gap:10px;justify-content:center}
+.cell{width:110px;height:110px;font-size:52px;font-weight:900;border-radius:12px;border:2px solid #d9cba8;background:#faf6ec;cursor:pointer;color:#2e2620}
+.cell:hover:not(:disabled){background:#efe5cb}
+.cell:disabled{cursor:default}
+.cell.win{background:#6b4f2e;color:#fff;border-color:#6b4f2e}
+.mode-row{display:flex;gap:8px;margin-bottom:12px}
+.mode-row button{flex:1;padding:10px;border-radius:10px;border:2px solid var(--border);background:var(--bg2);cursor:pointer;font-weight:700}
+.mode-row button.active{background:var(--ink);color:#f3ede0;border-color:var(--ink)}
+.status{min-height:28px;font-weight:700;margin:10px 0;text-align:center}
+@media(max-width:860px){
+  .wrap{grid-template-columns:1fr}
+  .touch{display:flex}
+  .board-ttt{grid-template-columns:repeat(3,90px)}
+  .cell{width:90px;height:90px;font-size:42px}
+}

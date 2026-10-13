@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beige Arcade — Tienda de Juegos</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">◍</span>
+        <span class="logo-text">BEIGE<em>ARCADE</em></span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">TIENDA</a>
+        <a href="#catalogo">BIBLIOTECA</a>
+        <a href="#catalogo">COMUNIDAD</a>
+        <a href="#catalogo">OFERTAS</a>
+      </nav>
+      <div class="topbar-right">
+        <div class="search-box">
+          <input id="searchInput" type="text" placeholder="buscar juegos..." autocomplete="off" />
+          <span class="search-icon">⌕</span>
+        </div>
+        <div class="user-chip"><span class="avatar">JP</span> Invitado</div>
+      </div>
+    </div>
+    <div class="subbar">
+      <div class="subbar-inner">
+        <span>Tu tienda</span><span>Juegos gratis</span><span>Clásicos</span><span>Arcade</span><span>2 Jugadores</span><span>Puzzle</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO estilo Steam -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">DESTACADOS Y RECOMENDADOS</p>
+          <h1>Cuatro clásicos.<br />Cero descargas.</h1>
+          <p class="hero-desc">Un mini-Steam en tonos beige. Elige un juego, entra a su página y juega al instante con HTML + CSS + JS.</p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
+            <a href="tetris.html" class="btn btn-ghost">Jugar Tetris →</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>4</strong><span>juegos</span></div>
+            <div><strong>100%</strong><span>jugable</span></div>
+            <div><strong>0 MB</strong><span>instalación</span></div>
+          </div>
+        </div>
+        <div class="hero-showcase">
+          <div class="showcase-main" id="showcaseMain">
+            <div class="showcase-art art-tetris"><span>TETRIS</span></div>
+            <div class="showcase-info">
+              <h2 id="showcaseTitle">Tetris Beige</h2>
+              <p id="showcaseDesc">Apila bloques, limpia líneas y sube de nivel.</p>
+              <div class="showcase-meta">
+                <span class="price">Gratis</span>
+                <a id="showcaseLink" href="tetris.html" class="btn btn-small">Jugar ahora</a>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-thumbs">
+            <button class="thumb active" data-game="tetris">Tetris</button>
+            <button class="thumb" data-game="pong">Pong</button>
+            <button class="thumb" data-game="snake">Snake</button>
+            <button class="thumb" data-game="gato">Gato</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGO -->
+    <section id="catalogo" class="catalog">
+      <div class="catalog-head">
+        <h2>BIBLIOTECA · <span id="resultCount">4 juegos</span></h2>
+        <div class="filters">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="arcade">Arcade</button>
+          <button class="filter" data-filter="puzzle">Puzzle</button>
+          <button class="filter" data-filter="2p">2 Jugadores</button>
+        </div>
+      </div>
+
+      <div class="grid" id="gameGrid">
+        <!-- PONG -->
+        <article class="card" data-tags="arcade 2p" data-title="pong retro paletas arcade">
+          <a class="card-art art-pong" href="pong.html" aria-label="Jugar Pong">
+            <div class="pong-deco"><i></i><i></i><i></i></div>
+            <span class="card-badge">ARCADE</span>
+          </a>
+          <div class="card-body">
+            <h3>Pong</h3>
+            <p class="card-desc">El clásico de paletas. Tú contra la máquina. Primero en llegar a 7 gana.</p>
+            <div class="card-tags"><span>W / S</span><span>1 Jugador</span><span>VS CPU</span></div>
+            <div class="card-foot">
+              <span class="price">Gratis</span>
+              <a href="pong.html" class="btn btn-small">JUGAR</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SNAKE -->
+        <article class="card" data-tags="arcade" data-title="snake vibora culebra arcade">
+          <a class="card-art art-snake" href="snake.html" aria-label="Jugar Snake">
+            <div class="snake-deco">●●●●○<br />○○○○●</div>
+            <span class="card-badge">ARCADE</span>
+          </a>
+          <div class="card-body">
+            <h3>Snake</h3>
+            <p class="card-desc">Come, crece y no te muerdas. Cada manzana acelera el ritmo.</p>
+            <div class="card-tags"><span>Flechas</span><span>Récord local</span><span>Velocidad +</span></div>
+            <div class="card-foot">
+              <span class="price">Gratis</span>
+              <a href="snake.html" class="btn btn-small">JUGAR</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GATO -->
+        <article class="card" data-tags="puzzle 2p" data-title="gato tic tac toe tres en raya puzzle">
+          <a class="card-art art-gato" href="gato.html" aria-label="Jugar Gato">
+            <div class="gato-deco"><span>X</span><span>O</span><span>X</span><span>O</span><span>X</span><span>O</span><span>X</span><span>O</span><span>X</span></div>
+            <span class="card-badge">PUZZLE</span>
+          </a>
+          <div class="card-body">
+            <h3>Gato <small>· Tic-Tac-Toe</small></h3>
+            <p class="card-desc">Tres en raya contra la CPU o contra un amigo en el mismo teclado.</p>
+            <div class="card-tags"><span>2 modos</span><span>1 o 2 Jug.</span><span>Mejor de 5</span></div>
+            <div class="card-foot">
+              <span class="price">Gratis</span>
+              <a href="gato.html" class="btn btn-small">JUGAR</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TETRIS -->
+        <article class="card" data-tags="puzzle arcade" data-title="tetris bloques lineas puzzle">
+          <a class="card-art art-tetris" href="tetris.html" aria-label="Jugar Tetris">
+            <div class="tetris-deco"><i class="t1"></i><i class="t2"></i><i class="t3"></i><i class="t4"></i></div>
+            <span class="card-badge">PUZZLE</span>
+          </a>
+          <div class="card-body">
+            <h3>Tetris</h3>
+            <p class="card-desc">Las 7 piezas clásicas, niveles, líneas y pieza siguiente. Puro vicio.</p>
+            <div class="card-tags"><span>7 piezas</span><span>Niveles</span><span>Récord</span></div>
+            <div class="card-foot">
+              <span class="price">Gratis</span>
+              <a href="tetris.html" class="btn btn-small">JUGAR</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p id="emptyMsg" class="empty-msg" hidden>Sin resultados para tu búsqueda. Prueba con “pong”, “snake”, “gato” o “tetris”.</p>
+    </section>
+
+    <section class="strip">
+      <div class="strip-item"><strong>◍ Hecho con HTML + CSS + JS</strong><span>Sin frameworks, sin instalación.</span></div>
+      <div class="strip-item"><strong>◍ Guarda tu récord</strong><span>Snake y Tetris usan localStorage.</span></div>
+      <div class="strip-item"><strong>◍ Funciona con teclado y táctil</strong><span>Botones en pantalla para móvil.</span></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Beige Arcade — un homenaje jugable a Steam.</span>
+      <span>Tono beige activado: #f3ede0</span>
+    </div>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>

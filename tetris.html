@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tetris — Beige Arcade</title>
+<link rel="stylesheet" href="game.css" />
+</head>
+<body>
+<header class="game-top"><div class="game-top-inner">
+  <a class="back" href="index.html">← Tienda</a>
+  <h1>TETRIS BEIGE</h1><span class="tag">PUZZLE · NIVELES</span>
+</div></header>
+<div class="wrap">
+  <div class="panel">
+    <div class="hud">
+      <div class="box"><small>Puntos</small><strong id="score">0</strong></div>
+      <div class="box"><small>Líneas</small><strong id="lines">0</strong></div>
+      <div class="box"><small>Nivel</small><strong id="level">1</strong></div>
+      <div class="box"><small>Récord</small><strong id="best">0</strong></div>
+    </div>
+    <div class="stage">
+      <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;justify-content:center">
+        <canvas id="tetris" width="240" height="480"></canvas>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+          <div style="color:#cbbfa5;font-size:12px;letter-spacing:2px">SIGUIENTE</div>
+          <canvas id="next" width="96" height="96"></canvas>
+          <button class="btn" id="btnStart" style="margin-top:8px">▶ Iniciar / Pausar</button>
+          <button class="btn secondary" id="btnReset">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+    <div class="touch">
+      <button id="tLeft">◀</button>
+      <button id="tRot">⟳</button>
+      <button id="tRight">▶</button>
+      <button id="tDown">▼</button>
+      <button id="tDrop">⬇⬇</button>
+    </div>
+  </div>
+  <div class="panel">
+    <h2 style="margin-top:0">Cómo jugar</h2>
+    <p class="hint"><kbd>←</kbd><kbd>→</kbd> mover · <kbd>↓</kbd> bajar · <kbd>↑</kbd> / <kbd>X</kbd> rotar · <kbd>Espacio</kbd> caída dura · <kbd>P</kbd> pausa.</p>
+    <p class="hint">Puntos: 1 línea = 100 · 2 = 300 · 3 = 500 · 4 (¡Tetris!) = 800, multiplicado por el nivel. Cada 10 líneas subes de nivel y aumenta la velocidad.</p>
+    <p class="hint" id="msg">Pulsa Iniciar para jugar.</p>
+  </div>
+</div>
+<script src="tetris.js"></script>
+</body>
+</html>

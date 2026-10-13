@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gato — Beige Arcade</title>
+<link rel="stylesheet" href="game.css" />
+</head>
+<body>
+<header class="game-top"><div class="game-top-inner">
+  <a class="back" href="index.html">← Tienda</a>
+  <h1>GATO · TIC-TAC-TOE</h1><span class="tag">PUZZLE · 1-2 JUG.</span>
+</div></header>
+<div class="wrap">
+  <div class="panel">
+    <div class="mode-row">
+      <button id="modeCpu" class="active">🤖 Vs CPU</button>
+      <button id="mode2p">👥 2 Jugadores</button>
+    </div>
+    <div class="hud">
+      <div class="box"><small>X (Tú / P1)</small><strong id="scoreX">0</strong></div>
+      <div class="box"><small>Ronda</small><strong id="round">1</strong></div>
+      <div class="box"><small>O (CPU / P2)</small><strong id="scoreO">0</strong></div>
+    </div>
+    <div class="status" id="status">Tu turno (X). ¡Suerte!</div>
+    <div class="stage" style="background:transparent;padding:0;min-height:0">
+      <div class="board-ttt" id="board"></div>
+    </div>
+    <div class="controls-row" style="justify-content:center">
+      <button class="btn secondary" id="btnReset">Reiniciar marcador</button>
+      <button class="btn" id="btnNext">Siguiente ronda</button>
+    </div>
+  </div>
+  <div class="panel">
+    <h2 style="margin-top:0">Cómo jugar</h2>
+    <p class="hint"><b>Vs CPU:</b> eres <b>X</b> y empiezas. La CPU juega como <b>O</b> con estrategia (gana, bloquea, centro, esquinas).</p>
+    <p class="hint"><b>2 Jugadores:</b> juegan por turnos en el mismo teclado/pantalla. P1 = X, P2 = O.</p>
+    <p class="hint">Cada victoria suma 1 punto. Los empates no suman. ¡A divertirse!</p>
+  </div>
+</div>
+<script src="gato.js"></script>
+</body>
+</html>
